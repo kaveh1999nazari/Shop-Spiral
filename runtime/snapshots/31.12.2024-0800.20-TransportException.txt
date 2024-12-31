@@ -1,0 +1,41 @@
+[Spiral\Goridge\Exception\TransportException]
+An error occurred while write payload to the stream: fwrite(): Write of 18831 bytes failed with errno=32 Broken pipe in vendor/spiral/roadrunner-worker/src/Worker.php:236
+
+ 1. Spiral\RoadRunner\Worker->sendFrame() at vendor/spiral/roadrunner-worker/src/Worker.php:236
+ 2. Spiral\RoadRunner\Worker->sendFrame() at vendor/spiral/roadrunner-worker/src/Worker.php:222
+ 3. Spiral\RoadRunner\Worker->send() at vendor/spiral/roadrunner-worker/src/Worker.php:106
+ 4. Spiral\RoadRunner\Worker->respond() at vendor/spiral/roadrunner-http/src/HttpWorker.php:98
+ 5. Spiral\RoadRunner\Http\HttpWorker->respond() at vendor/spiral/roadrunner-http/src/PSR7Worker.php:84
+ 6. Spiral\RoadRunner\Http\PSR7Worker->respond() at vendor/spiral/roadrunner-bridge/src/Http/Dispatcher.php:45
+ 7. Spiral\RoadRunnerBridge\Http\Dispatcher->serve() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:316
+ 8. Spiral\Boot\AbstractKernel::Spiral\Boot\{closure}()
+ 9. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+10. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+11. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Core/src/Container.php:404
+12. Spiral\Core\Container::Spiral\Core\{closure}() at vendor/spiral/framework/src/Core/src/ContainerScope.php:46
+13. Spiral\Core\ContainerScope::runScope() at vendor/spiral/framework/src/Core/src/Container.php:399
+14. Spiral\Core\Container->runIsolatedScope() at vendor/spiral/framework/src/Core/src/Container.php:181
+15. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:312
+16. Spiral\Boot\AbstractKernel->serve() at app.php:31
+
+[Spiral\Goridge\Exception\TransportException]
+An error occurred while write payload to the stream: fwrite(): Write of 18831 bytes failed with errno=32 Broken pipe in vendor/spiral/goridge/src/StreamRelay.php:125
+
+ 1. Spiral\Goridge\StreamRelay->send() at vendor/spiral/goridge/src/StreamRelay.php:125
+ 2. Spiral\Goridge\StreamRelay->send() at vendor/spiral/roadrunner-worker/src/Worker.php:234
+ 3. Spiral\RoadRunner\Worker->sendFrame() at vendor/spiral/roadrunner-worker/src/Worker.php:222
+ 4. Spiral\RoadRunner\Worker->send() at vendor/spiral/roadrunner-worker/src/Worker.php:106
+ 5. Spiral\RoadRunner\Worker->respond() at vendor/spiral/roadrunner-http/src/HttpWorker.php:98
+ 6. Spiral\RoadRunner\Http\HttpWorker->respond() at vendor/spiral/roadrunner-http/src/PSR7Worker.php:84
+ 7. Spiral\RoadRunner\Http\PSR7Worker->respond() at vendor/spiral/roadrunner-bridge/src/Http/Dispatcher.php:45
+ 8. Spiral\RoadRunnerBridge\Http\Dispatcher->serve() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:316
+ 9. Spiral\Boot\AbstractKernel::Spiral\Boot\{closure}()
+10. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+11. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+12. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Core/src/Container.php:404
+13. Spiral\Core\Container::Spiral\Core\{closure}() at vendor/spiral/framework/src/Core/src/ContainerScope.php:46
+14. Spiral\Core\ContainerScope::runScope() at vendor/spiral/framework/src/Core/src/Container.php:399
+15. Spiral\Core\Container->runIsolatedScope() at vendor/spiral/framework/src/Core/src/Container.php:181
+16. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:312
+17. Spiral\Boot\AbstractKernel->serve() at app.php:31
+

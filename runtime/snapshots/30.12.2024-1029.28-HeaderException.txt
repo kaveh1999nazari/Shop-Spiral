@@ -1,0 +1,19 @@
+[Spiral\Goridge\Exception\HeaderException]
+Unable to read frame header: Incorrect header size in vendor/spiral/goridge/src/StreamRelay.php:80
+
+ 1. Spiral\Goridge\StreamRelay->waitFrame() at vendor/spiral/goridge/src/StreamRelay.php:80
+ 2. Spiral\Goridge\StreamRelay->waitFrame() at vendor/spiral/roadrunner-worker/src/Worker.php:66
+ 3. Spiral\RoadRunner\Worker->waitPayload() at vendor/spiral/roadrunner-http/src/HttpWorker.php:58
+ 4. Spiral\RoadRunner\Http\HttpWorker->waitRequest() at vendor/spiral/roadrunner-http/src/PSR7Worker.php:67
+ 5. Spiral\RoadRunner\Http\PSR7Worker->waitRequest() at vendor/spiral/roadrunner-bridge/src/Http/Dispatcher.php:42
+ 6. Spiral\RoadRunnerBridge\Http\Dispatcher->serve() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:316
+ 7. Spiral\Boot\AbstractKernel::Spiral\Boot\{closure}()
+ 8. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 9. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+10. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Core/src/Container.php:404
+11. Spiral\Core\Container::Spiral\Core\{closure}() at vendor/spiral/framework/src/Core/src/ContainerScope.php:46
+12. Spiral\Core\ContainerScope::runScope() at vendor/spiral/framework/src/Core/src/Container.php:399
+13. Spiral\Core\Container->runIsolatedScope() at vendor/spiral/framework/src/Core/src/Container.php:181
+14. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:312
+15. Spiral\Boot\AbstractKernel->serve() at app.php:31
+

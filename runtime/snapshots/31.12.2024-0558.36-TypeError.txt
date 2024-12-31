@@ -1,0 +1,181 @@
+[TypeError]
+Spiral\RoadRunner\GRPC\Server::serve(): Argument #1 ($worker) must be of type ?Spiral\RoadRunner\WorkerInterface, string given, called in /home/kaveh/PhpStorm/Shop-Spiral/app/src/Endpoint/Web/AuthController.php on line 19 in vendor/spiral/roadrunner-grpc/src/Server.php:102
+
+  1. Spiral\RoadRunner\GRPC\Server->serve() at vendor/spiral/roadrunner-grpc/src/Server.php:102
+  2. Spiral\RoadRunner\GRPC\Server->serve() at app/src/Endpoint/Web/AuthController.php:19
+  3. App\Endpoint\Web\AuthController->register()
+  4. ReflectionMethod->invokeArgs() at vendor/spiral/framework/src/Hmvc/src/AbstractCore.php:110
+  5. Spiral\Core\AbstractCore->invoke() at vendor/spiral/framework/src/Hmvc/src/AbstractCore.php:62
+  6. Spiral\Core\AbstractCore->handle() at vendor/spiral/framework/src/Hmvc/src/InterceptorPipeline.php:116
+  7. Spiral\Core\InterceptorPipeline->handle() at vendor/spiral/framework/src/Hmvc/src/InterceptorPipeline.php:76
+  8. Spiral\Core\InterceptorPipeline->callAction() at vendor/spiral/framework/src/Framework/Domain/GuardInterceptor.php:32
+  9. Spiral\Domain\GuardInterceptor->process() at vendor/spiral/framework/src/Hmvc/src/InterceptorPipeline.php:111
+ 10. Spiral\Core\InterceptorPipeline->handle() at vendor/spiral/framework/src/Hmvc/src/InterceptorPipeline.php:76
+ 11. Spiral\Core\InterceptorPipeline->callAction() at vendor/spiral/cycle-bridge/src/Interceptor/CycleInterceptor.php:70
+ 12. Spiral\Cycle\Interceptor\CycleInterceptor->process() at vendor/spiral/framework/src/Hmvc/src/InterceptorPipeline.php:111
+ 13. Spiral\Core\InterceptorPipeline->handle() at vendor/spiral/framework/src/Router/src/CoreHandler.php:123
+ 14. Spiral\Router\CoreHandler->Spiral\Router\{closure}()
+ 15. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 16. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 17. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 18. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 19. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 20. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 21. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 22. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Router/src/CoreHandler.php:115
+ 23. Spiral\Router\CoreHandler->Spiral\Router\{closure}()
+ 24. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 25. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 26. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Core/src/Container.php:404
+ 27. Spiral\Core\Container::Spiral\Core\{closure}() at vendor/spiral/framework/src/Core/src/ContainerScope.php:46
+ 28. Spiral\Core\ContainerScope::runScope() at vendor/spiral/framework/src/Core/src/Container.php:399
+ 29. Spiral\Core\Container->runIsolatedScope() at vendor/spiral/framework/src/Core/src/Container.php:181
+ 30. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 31. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Router/src/CoreHandler.php:110
+ 32. Spiral\Router\CoreHandler->handle() at vendor/spiral/framework/src/Http/src/Pipeline.php:75
+ 33. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Pipeline.php:75
+ 34. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Framework/Filter/ValidationHandlerMiddleware.php:37
+ 35. Spiral\Filter\ValidationHandlerMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+ 36. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+ 37. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 38. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 39. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 40. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 41. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 42. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 43. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 44. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+ 45. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Csrf/src/Middleware/CsrfMiddleware.php:45
+ 46. Spiral\Csrf\Middleware\CsrfMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+ 47. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+ 48. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 49. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 50. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 51. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 52. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 53. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 54. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 55. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+ 56. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Framework/Session/Middleware/SessionMiddleware.php:52
+ 57. Spiral\Session\Middleware\SessionMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+ 58. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+ 59. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 60. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 61. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 62. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 63. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 64. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 65. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 66. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+ 67. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Cookies/src/Middleware/CookiesMiddleware.php:39
+ 68. Spiral\Cookies\Middleware\CookiesMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+ 69. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+ 70. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 71. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 72. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 73. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 74. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 75. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 76. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 77. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+ 78. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Pipeline.php:57
+ 79. Spiral\Http\Pipeline->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+ 80. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+ 81. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 82. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 83. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 84. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 85. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 86. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 87. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+ 88. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+ 89. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Pipeline.php:57
+ 90. Spiral\Http\Pipeline->process() at vendor/spiral/framework/src/Router/src/Route.php:121
+ 91. Spiral\Router\Route->handle() at vendor/spiral/framework/src/Router/src/Router.php:94
+ 92. Spiral\Router\Router->Spiral\Router\{closure}()
+ 93. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+ 94. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+ 95. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+ 96. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+ 97. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+ 98. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+ 99. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+100. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Router/src/Router.php:68
+101. Spiral\Router\Router->handle() at vendor/spiral/framework/src/Http/src/Pipeline.php:75
+102. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Framework/Debug/StateCollector/HttpCollector.php:21
+103. Spiral\Debug\StateCollector\HttpCollector->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+104. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+105. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+106. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+107. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+108. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+109. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+110. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+111. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+112. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+113. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Middleware/JsonPayloadMiddleware.php:39
+114. Spiral\Http\Middleware\JsonPayloadMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+115. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+116. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+117. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+118. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+119. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+120. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+121. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+122. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+123. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+124. Spiral\Http\Pipeline->handle() at vendor/spiral/dumper/src/Middleware/DumperMiddleware.php:27
+125. Spiral\Debug\Middleware\DumperMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+126. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+127. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+128. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+129. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+130. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+131. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+132. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+133. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+134. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+135. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Middleware/ErrorHandlerMiddleware.php:45
+136. Spiral\Http\Middleware\ErrorHandlerMiddleware->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+137. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+138. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+139. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+140. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+141. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+142. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+143. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+144. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+145. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+146. Spiral\Http\Pipeline->handle() at app/src/Endpoint/Web/Middleware/LocaleSelector.php:40
+147. App\Endpoint\Web\Middleware\LocaleSelector->process() at vendor/spiral/framework/src/Http/src/Pipeline.php:82
+148. Spiral\Http\Pipeline->Spiral\Http\{closure}()
+149. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+150. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+151. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+152. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+153. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+154. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+155. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+156. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Pipeline.php:98
+157. Spiral\Http\Pipeline->handle() at vendor/spiral/framework/src/Http/src/Http.php:73
+158. Spiral\Http\Http->Spiral\Http\{closure}()
+159. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+160. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+161. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:33
+162. Spiral\Telemetry\AbstractTracer::Spiral\Telemetry\{closure}() at vendor/spiral/framework/src/Core/src/Container.php:207
+163. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Core/src/Internal/Proxy.php(60) : eval()'d code:12
+164. Spiral\Core\ScopeInterface SCOPED PROXY->runScope() at vendor/spiral/framework/src/Telemetry/src/AbstractTracer.php:30
+165. Spiral\Telemetry\AbstractTracer->runScope() at vendor/spiral/framework/src/Telemetry/src/NullTracer.php:25
+166. Spiral\Telemetry\NullTracer->trace() at vendor/spiral/framework/src/Http/src/Http.php:94
+167. Spiral\Http\Http->handle() at vendor/spiral/roadrunner-bridge/src/Http/Dispatcher.php:44
+168. Spiral\RoadRunnerBridge\Http\Dispatcher->serve() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:316
+169. Spiral\Boot\AbstractKernel::Spiral\Boot\{closure}()
+170. ReflectionFunction->invokeArgs() at vendor/spiral/framework/src/Core/src/Internal/Invoker.php:77
+171. Spiral\Core\Internal\Invoker->invoke() at vendor/spiral/framework/src/Core/src/Container.php:292
+172. Spiral\Core\Container->invoke() at vendor/spiral/framework/src/Core/src/Container.php:404
+173. Spiral\Core\Container::Spiral\Core\{closure}() at vendor/spiral/framework/src/Core/src/ContainerScope.php:46
+174. Spiral\Core\ContainerScope::runScope() at vendor/spiral/framework/src/Core/src/Container.php:399
+175. Spiral\Core\Container->runIsolatedScope() at vendor/spiral/framework/src/Core/src/Container.php:181
+176. Spiral\Core\Container->runScope() at vendor/spiral/framework/src/Boot/src/AbstractKernel.php:312
+177. Spiral\Boot\AbstractKernel->serve() at app.php:31
+

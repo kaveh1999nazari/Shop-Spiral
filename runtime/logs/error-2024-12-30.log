@@ -1,0 +1,4 @@
+[2024-12-30T10:29:06.273623+00:00] ERROR: Spiral\Router\Exception\RouteNotFoundException: Unable to route `http://0.0.0.0:8080/%5D`. in /home/kaveh/PhpStorm/Shop-Spiral/vendor/spiral/framework/src/Router/src/Router.php at line 79 []
+[2024-12-30T10:29:11.654915+00:00] ERROR: Spiral\Router\Exception\RouteNotFoundException: Unable to route `http://0.0.0.0:8080/`. in /home/kaveh/PhpStorm/Shop-Spiral/vendor/spiral/framework/src/Router/src/Router.php at line 79 []
+[2024-12-30T10:29:28.240795+00:00] ERROR: Spiral\Goridge\Exception\HeaderException: Unable to read frame header: Incorrect header size in /home/kaveh/PhpStorm/Shop-Spiral/vendor/spiral/goridge/src/StreamRelay.php at line 80 []
+[2024-12-30T14:20:22.996858+00:00] ERROR: Spiral\Goridge\Exception\HeaderException: Unable to read frame header: Incorrect header size in /home/kaveh/PhpStorm/Shop-Spiral/vendor/spiral/goridge/src/StreamRelay.php at line 80 []
