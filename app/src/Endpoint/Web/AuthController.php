@@ -2,13 +2,9 @@
 
 namespace App\Endpoint\Web;
 
-
-use Illuminate\Support\Facades\Http;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Spiral\Http\Request\InputManager;
-use Spiral\RoadRunner\GRPC\Server;
-use Spiral\RoadRunner\Worker;
 use Spiral\Router\Annotation\Route;
 
 class AuthController
