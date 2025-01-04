@@ -145,6 +145,7 @@ return array(
     'Google\\Iam\\' => array($vendorDir . '/google/common-protos/src/Iam'),
     'Google\\Cloud\\' => array($vendorDir . '/google/common-protos/src/Cloud'),
     'Google\\Api\\' => array($vendorDir . '/google/common-protos/src/Api'),
+    'GRPC\\' => array($baseDir . '/generated'),
     'GPBMetadata\\Google\\Type\\' => array($vendorDir . '/google/common-protos/metadata/Type'),
     'GPBMetadata\\Google\\Rpc\\' => array($vendorDir . '/google/common-protos/metadata/Rpc'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),

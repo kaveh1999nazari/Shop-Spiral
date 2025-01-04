@@ -231,6 +231,7 @@ class ComposerStaticInit06ead3186c1b420cf55aaad1e4162577
             'Google\\Iam\\' => 11,
             'Google\\Cloud\\' => 13,
             'Google\\Api\\' => 11,
+            'GRPC\\' => 5,
             'GPBMetadata\\Google\\Type\\' => 24,
             'GPBMetadata\\Google\\Rpc\\' => 23,
             'GPBMetadata\\Google\\Protobuf\\' => 28,
@@ -860,6 +861,10 @@ class ComposerStaticInit06ead3186c1b420cf55aaad1e4162577
         'Google\\Api\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/common-protos/src/Api',
+        ),
+        'GRPC\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/generated',
         ),
         'GPBMetadata\\Google\\Type\\' => 
         array (
