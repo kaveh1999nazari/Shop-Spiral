@@ -4,6 +4,8 @@ namespace App\Endpoint\Web;
 
 use GRPC\UserManagement\CreateUserRequest;
 use GRPC\UserManagement\CreateUserResponse;
+use GRPC\UserManagement\UpdateUserRequest;
+use GRPC\UserManagement\UpdateUserResponse;
 use GRPC\UserManagement\UserManagementGrpcClient;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -35,10 +37,36 @@ class AuthController
         $user = $this->userService->Create(
                 $requestClass,
                 CreateUserResponse::class
-            );
+        );
 
         return $this->jsonResponse(['id' => $user->getId(),
                                     'message' => "successfully account created",]);
+    }
+
+    #[Route(route: '/api/update', methods:['POST'])]
+    public function update(ServerRequestInterface $request, InputManager $input): ResponseInterface
+    {
+        $requestClass = new UpdateUserRequest([
+            'user' => $input->data('user'),
+            'first_name' => $input->data('first_name'),
+            'last_name' => $input->data('last_name'),
+            'mobile' => $input->data('mobile'),
+            'password' => $input->data('password'),
+            'email' => $input->data('email'),
+            'birth_date' => $input->data('birth_date'),
+            'father_name' => $input->data('father_name'),
+            'national_code' => $input->data('national_code'),
+            'picture' => $input->data('picture'),
+            'code' => $input->data('code'),
+        ]);
+
+        $user = $this->userService->Update(
+            $requestClass,
+            UpdateUserResponse::class
+        );
+
+        return $this->jsonResponse(['id' => $user->getId(),
+                                    'message' => "successfully account updated",]);
     }
 
     private function jsonResponse(array $data, int $status = 200): ResponseInterface
