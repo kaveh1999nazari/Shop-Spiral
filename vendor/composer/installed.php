@@ -3,7 +3,7 @@
         'name' => 'spiral/app',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '9e663ac113faf100838694e06aaa9c76b00cb42c',
+        'reference' => '9e8b111894acd2c75da5ea73e1bc285c83ba2893',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -219,6 +219,15 @@
             'install_path' => __DIR__ . '/../dnoegel/php-xdg-base-dir',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'doctrine/annotations' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'reference' => '901c2ee5d26eb64ff43c47976e114bf00843acf7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../doctrine/annotations',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'doctrine/deprecations' => array(
             'pretty_version' => '1.1.4',
@@ -1064,7 +1073,7 @@
         'spiral/app' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '9e663ac113faf100838694e06aaa9c76b00cb42c',
+            'reference' => '9e8b111894acd2c75da5ea73e1bc285c83ba2893',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -163,6 +163,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/http" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/injector" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/strings" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
