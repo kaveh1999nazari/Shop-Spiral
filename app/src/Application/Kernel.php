@@ -107,6 +107,9 @@ class Kernel extends \Spiral\Framework\Kernel
             Bootloader\RoutesBootloader::class,
 
             ServiceBootloader::class,
+
+            // Mailer
+            \Spiral\SendIt\Bootloader\MailerBootloader::class,
         ];
     }
 
