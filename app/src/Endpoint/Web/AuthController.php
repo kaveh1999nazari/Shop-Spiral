@@ -3,18 +3,17 @@
 namespace App\Endpoint\Web;
 
 use GRPC\UserManagement\CreateUserRequest;
+use GRPC\UserManagement\CreateUserResponse;
 use GRPC\UserManagement\UserManagementGrpcClient;
-use GRPC\UserManagement\UserManagementGrpcInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Spiral\Http\Request\InputManager;
-use Spiral\RoadRunner\GRPC\Context;
 use Spiral\Router\Annotation\Route;
 
 class AuthController
 {
 
-    public function __construct(private UserManagementGrpcClient $userService)
+    public function __construct(private readonly UserManagementGrpcClient $userService)
     {
     }
 
@@ -33,18 +32,13 @@ class AuthController
             'picture' => $input->data('picture'),
         ]);
 
-        try {
-            $grpcResponse = $this->userService->Create(
-                new Context([]),
-                $requestClass
+        $user = $this->userService->Create(
+                $requestClass,
+                CreateUserResponse::class
             );
-        } catch (\Exception $e) {
-            return $this->jsonResponse(['error' => $e->getMessage()], 500);
-        }
 
-
-
-        return $this->jsonResponse(['kaveh' => $requestClass->getEmail()]);
+        return $this->jsonResponse(['id' => $user->getId(),
+                                    'message' => "successfully account created",]);
     }
 
     private function jsonResponse(array $data, int $status = 200): ResponseInterface
