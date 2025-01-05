@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace GRPC\Bootloader;
 
 use GRPC\Config\GRPCServicesConfig;
+use GRPC\UserManagement\GrpcClient;
 use GRPC\UserManagement\UserManagementGrpcClient;
-use GRPC\UserManagement\UserManagementGrpcInterface;
 use Spiral\Boot\Bootloader\Bootloader;
 use Spiral\Boot\EnvironmentInterface;
 use Spiral\Config\ConfiguratorInterface;
 use Spiral\Core\Container;
-use Spiral\Core\InterceptableCore;
 use Spiral\RoadRunnerBridge\GRPC\Interceptor\ServiceClientCore;
 
 class ServiceBootloader extends Bootloader
@@ -52,20 +51,16 @@ class ServiceBootloader extends Bootloader
     private function initServices(Container $container): void
     {
         $container->bindSingleton(
-            UserManagementGrpcInterface::class,
-            static function(GRPCServicesConfig $config) use($container): UserManagementGrpcInterface
+            UserManagementGrpcClient::class,
+            static function(GRPCServicesConfig $config) use($container): GrpcClient
             {
                 $service = $config->getService(UserManagementGrpcClient::class);
-                $core = new InterceptableCore(new ServiceClientCore(
+                $serviceClientCore = new ServiceClientCore(
                     $service['host'],
                     ['credentials' => $service['credentials'] ?? $config->getDefaultCredentials()]
-                ));
+                );
 
-                foreach ($config->getInterceptors() as $interceptor) {
-                    $core->addInterceptor($container->get($interceptor));
-                }
-
-                return $container->make(UserManagementGrpcClient::class, ['core' => $core]);
+                return $container->make(UserManagementGrpcClient::class, ['core' => $serviceClientCore]);
             }
         );
     }
