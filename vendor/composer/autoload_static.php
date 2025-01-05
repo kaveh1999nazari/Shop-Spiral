@@ -256,6 +256,7 @@ class ComposerStaticInit06ead3186c1b420cf55aaad1e4162577
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\Common\\Lexer\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'Defuse\\Crypto\\' => 14,
             'DeepCopy\\' => 9,
         ),
@@ -925,6 +926,10 @@ class ComposerStaticInit06ead3186c1b420cf55aaad1e4162577
         'Doctrine\\Common\\Lexer\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/src',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
         ),
         'Defuse\\Crypto\\' => 
         array (
