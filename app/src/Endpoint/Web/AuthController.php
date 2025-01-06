@@ -34,13 +34,13 @@ class AuthController
             'picture' => $input->data('picture'),
         ]);
 
-        $user = $this->userService->Create(
+        $response = $this->userService->Create(
                 $requestClass,
                 CreateUserResponse::class
         );
 
-        return $this->jsonResponse(['id' => $user->getId(),
-                                    'message' => "successfully account created",]);
+        return $this->jsonResponse(['id' => $response->id,
+                                    'message' => $response->message,]);
     }
 
     #[Route(route: '/api/update', methods:['POST'])]
@@ -60,13 +60,13 @@ class AuthController
             'code' => $input->data('code'),
         ]);
 
-        $user = $this->userService->Update(
+        $response = $this->userService->Update(
             $requestClass,
             UpdateUserResponse::class
         );
 
-        return $this->jsonResponse(['id' => $user->getId(),
-                                    'message' => "successfully account updated",]);
+        return $this->jsonResponse(['id' => $response->id,
+                                    'message' => $response->message,]);
     }
 
     private function jsonResponse(array $data, int $status = 200): ResponseInterface
