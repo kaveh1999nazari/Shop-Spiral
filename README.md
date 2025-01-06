@@ -23,12 +23,6 @@
                     <ul>
                         <li>with user personal information</li>
                     </ul>
-                <li>Login user:
-                    <ul>
-                        <li>with Email and OTP</li>
-                        <li>with mobile and password</li>
-                        <li>JWT-based User Authentication</li>
-                    </ul>
                 <li>User can:
                     <ul>
                         <li>update the profile by OTP</li>
