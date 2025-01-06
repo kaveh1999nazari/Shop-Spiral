@@ -12,7 +12,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Spiral\Http\Request\InputManager;
 use Spiral\Router\Annotation\Route;
 
-class AuthController
+class UserController
 {
 
     public function __construct(private readonly UserManagementGrpcClient $userService)
