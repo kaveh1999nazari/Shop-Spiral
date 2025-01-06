@@ -2,7 +2,7 @@
 
 namespace App\Domain\DataTransferObject;
 
-class AuthResponseDTO extends BaseDTO
+class UserResponseDTO extends BaseDTO
 {
 
 
