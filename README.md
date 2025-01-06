@@ -15,8 +15,8 @@
         </ul>
     </div>
     <div class="changelog">
-        <div class="version" id="v1.0">
-            <h2>Last update V1.0</h2>
+        <div class="version" id="v1.0.1">
+            <h2>Last update V1.0.1</h2>
             <p><strong>Framework:</strong> Spiral Framework with Rest Api</p>
             <ul class="features">
                 <li>Register user:
@@ -26,6 +26,9 @@
                 <li>User can:
                     <ul>
                         <li>update the profile by OTP</li>
+                        <li>Login By Mobile</li>
+                        <li>Login By Email</li>
+                        <li>Logout</li>
                     </ul>
                 </li>
             </ul>
