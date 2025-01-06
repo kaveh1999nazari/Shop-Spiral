@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace GRPC\UserManagement;
 
+use GRPC\GrpcClient;
+
 /**
  * @method Create(CreateUserRequest $request, string $responseClass, array $context = [])
  * @method Update(UpdateUserRequest $request, string $responseClass, array $context = [])
