@@ -2,6 +2,7 @@
 
 namespace GRPC\UserManagement;
 
+use App\Domain\DataTransferObject\AuthResponseDTO;
 use Spiral\RoadRunner\GRPC\Context;
 use Spiral\RoadRunner\GRPC\Exception\GRPCException;
 use Spiral\RoadRunnerBridge\GRPC\Interceptor\ServiceClientCore;
@@ -19,7 +20,7 @@ abstract class GrpcClient
 
     abstract public function getServiceName(): string;
 
-    public function __call(string $name, array $arguments)
+    public function __call(string $name, array $arguments): AuthResponseDTO
     {
         /** @var stdClass $detail */
         /** @var object $response */
@@ -34,10 +35,12 @@ abstract class GrpcClient
         );
 
         if (null !== $response) {
-            return $response;
+            return new AuthResponseDTO($response->getId(), $response->getMessage());
         }
 
-        throw new GRPCException($detail->details, $detail->code);
+
+        return new AuthResponseDTO($detail->code, $detail->details);
+
     }
 
 }
