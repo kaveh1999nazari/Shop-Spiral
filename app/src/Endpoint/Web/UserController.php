@@ -6,7 +6,7 @@ use GRPC\UserManagement\CreateUserRequest;
 use GRPC\UserManagement\CreateUserResponse;
 use GRPC\UserManagement\UpdateUserRequest;
 use GRPC\UserManagement\UpdateUserResponse;
-use GRPC\UserManagement\UserManagementGrpcClient;
+use GRPC\UserManagement\UserManagementUserGrpcClient;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Spiral\Http\Request\InputManager;
@@ -15,7 +15,7 @@ use Spiral\Router\Annotation\Route;
 class UserController
 {
 
-    public function __construct(private readonly UserManagementGrpcClient $userService)
+    public function __construct(private readonly UserManagementUserGrpcClient $userService)
     {
     }
 
