@@ -3,7 +3,7 @@
         'name' => 'spiral/app',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '32ec3af8c5147a2c446603fe4e52afc09bb281af',
+        'reference' => '8c0c4c1ef270389f6bf52b99bbfa0a978857571a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1073,7 +1073,7 @@
         'spiral/app' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '32ec3af8c5147a2c446603fe4e52afc09bb281af',
+            'reference' => '8c0c4c1ef270389f6bf52b99bbfa0a978857571a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -26,7 +26,8 @@
         "spiral/roadrunner-cli": "^2.5",
         "spiral/router": "*",
         "spiral/stempler-bridge": "^3.8",
-        "spiral/translator": "^3.8"
+        "spiral/translator": "^3.8",
+        "ext-grpc": "*"
     },
     "require-dev": {
         "spiral/testing": "^2.3",
