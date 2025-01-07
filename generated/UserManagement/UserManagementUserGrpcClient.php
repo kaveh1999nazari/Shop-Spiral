@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace GRPC\UserManagement;
 
-use GRPC\GrpcClient;
-
 /**
  * @method Create(CreateUserRequest $request, string $responseClass, array $context = [])
  * @method Update(UpdateUserRequest $request, string $responseClass, array $context = [])
  */
-class UserManagementGrpcClient extends GrpcClient
+class UserManagementUserGrpcClient extends UserGrpcClient
 {
     public function getServiceInterface(): string
     {
