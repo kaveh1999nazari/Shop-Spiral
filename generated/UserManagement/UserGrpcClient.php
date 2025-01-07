@@ -1,13 +1,13 @@
 <?php
 
-namespace GRPC;
+namespace GRPC\UserManagement;
 
 use App\Domain\DataTransferObject\UserResponseDTO;
 use Spiral\RoadRunner\GRPC\Context;
 use Spiral\RoadRunnerBridge\GRPC\Interceptor\ServiceClientCore;
 use stdClass;
 
-abstract class GrpcClient
+abstract class UserGrpcClient
 {
     public function __construct(
         private readonly ServiceClientCore $core,
