@@ -22,6 +22,33 @@ interface UserManagementGrpcInterface extends GRPC\ServiceInterface
 
     /**
     * @param GRPC\ContextInterface $ctx
+    * @param CreateUserResidentRequest $in
+    * @return CreateUserResidentResponse
+    *
+    * @throws GRPC\Exception\InvokeException
+    */
+    public function CreateResident(GRPC\ContextInterface $ctx, CreateUserResidentRequest $in): CreateUserResidentResponse;
+
+    /**
+    * @param GRPC\ContextInterface $ctx
+    * @param CreateUserEducationRequest $in
+    * @return CreateUserEducationResponse
+    *
+    * @throws GRPC\Exception\InvokeException
+    */
+    public function CreateEducation(GRPC\ContextInterface $ctx, CreateUserEducationRequest $in): CreateUserEducationResponse;
+
+    /**
+    * @param GRPC\ContextInterface $ctx
+    * @param CreateUserJobRequest $in
+    * @return CreateUserJobResponse
+    *
+    * @throws GRPC\Exception\InvokeException
+    */
+    public function CreateJob(GRPC\ContextInterface $ctx, CreateUserJobRequest $in): CreateUserJobResponse;
+
+    /**
+    * @param GRPC\ContextInterface $ctx
     * @param UpdateUserRequest $in
     * @return UpdateUserResponse
     *
