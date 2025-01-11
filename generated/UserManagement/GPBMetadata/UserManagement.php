@@ -16,7 +16,7 @@ class UserManagement
         }
         $pool->internalAddGeneratedFile(
             '
-§
+ì
 user_management.protouser_management"¼
 CreateUserRequest
 
@@ -31,6 +31,44 @@ first_name (	
 birth_date (	
 picture	 (	"1
 CreateUserResponse
+
+id (
+message (	"‰
+CreateUserResidentRequest
+user (
+address (	
+postal_code (	
+province (
+city (
+postal_code_file (	"9
+CreateUserResidentResponse
+
+id (
+message (	"f
+CreateUserEducationRequest
+user (
+
+university (	
+degree (
+education_file (	":
+CreateUserEducationResponse
+
+id (
+message (	"ì
+CreateUserJobRequest
+user (
+province (
+city (
+title (	
+phone (	
+postal_code (	
+address (	
+monthly_salary ( 
+work_experience_duration	 (
+	work_type
+ (	
+contract_type (	"4
+CreateUserJobResponse
 
 id (
 message (	"Ø
@@ -52,9 +90,12 @@ birth_date	 (	
 UpdateUserResponse
 
 id (
-message (	2º
+message (	2ï
 UserManagementGrpcQ
-Create".user_management.CreateUserRequest#.user_management.CreateUserResponseQ
+Create".user_management.CreateUserRequest#.user_management.CreateUserResponsei
+CreateResident*.user_management.CreateUserResidentRequest+.user_management.CreateUserResidentResponsel
+CreateEducation+.user_management.CreateUserEducationRequest,.user_management.CreateUserEducationResponseZ
+	CreateJob%.user_management.CreateUserJobRequest&.user_management.CreateUserJobResponseQ
 Update".user_management.UpdateUserRequest#.user_management.UpdateUserResponseB8ÊGRPC\\UserManagementâGRPC\\UserManagement\\GPBMetadatabproto3'
         , true);
 

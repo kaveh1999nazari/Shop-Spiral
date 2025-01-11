@@ -3,10 +3,11 @@
 namespace App\Endpoint\Web;
 
 use GRPC\UserManagement\CreateUserRequest;
+use GRPC\UserManagement\CreateUserResidentRequest;
 use GRPC\UserManagement\CreateUserResponse;
 use GRPC\UserManagement\UpdateUserRequest;
 use GRPC\UserManagement\UpdateUserResponse;
-use GRPC\UserManagement\UserManagementUserGrpcClient;
+use GRPC\UserManagement\UserManagementGrpcClient;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Spiral\Http\Request\InputManager;
@@ -15,7 +16,7 @@ use Spiral\Router\Annotation\Route;
 class UserController
 {
 
-    public function __construct(private readonly UserManagementUserGrpcClient $userService)
+    public function __construct(private readonly UserManagementGrpcClient $userService)
     {
     }
 
@@ -34,13 +35,27 @@ class UserController
             'picture' => $input->data('picture'),
         ]);
 
-        $response = $this->userService->Create(
+        $user = $this->userService->Create(
                 $requestClass,
                 CreateUserResponse::class
         );
 
-        return $this->jsonResponse(['id' => $response->id,
-                                    'message' => $response->message,]);
+        $requestClass2 = new CreateUserResidentRequest([
+            'user' => $user->id,
+            'address' => $input->data('address'),
+            'postal_code' => $input->data('postal_code'),
+            'province' => $input->data('province'),
+            'city' => $input->data('city'),
+            'postal_code_file' => $input->data('postal_code_file'),
+        ]);
+
+        $userResident = $this->userService->CreateResident(
+            $requestClass2,
+            CreateUserResidentRequest::class
+        );
+
+        return $this->jsonResponse(['id' => $user->id,
+                                    'message' => $user->message,]);
     }
 
     #[Route(route: '/api/update', methods:['POST'])]

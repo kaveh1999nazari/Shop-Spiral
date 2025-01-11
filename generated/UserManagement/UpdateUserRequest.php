@@ -9,6 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *for updating user
+ *
  * Generated from protobuf message <code>user_management.UpdateUserRequest</code>
  */
 class UpdateUserRequest extends \Google\Protobuf\Internal\Message

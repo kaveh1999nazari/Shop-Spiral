@@ -7,7 +7,7 @@ namespace GRPC\Bootloader;
 use GRPC\authentication\AuthenticationUserGrpcClient;
 use GRPC\Config\GRPCServicesConfig;
 use GRPC\UserManagement\UserGrpcClient;
-use GRPC\UserManagement\UserManagementUserGrpcClient;
+use GRPC\UserManagement\UserManagementGrpcClient;
 use Spiral\Boot\Bootloader\Bootloader;
 use Spiral\Boot\EnvironmentInterface;
 use Spiral\Config\ConfiguratorInterface;
@@ -41,7 +41,7 @@ class ServiceBootloader extends Bootloader
             GRPCServicesConfig::CONFIG,
             [
                 'services' => [
-                    UserManagementUserGrpcClient::class => ['host' => $env->get('USER_MANAGEMENT_GRPC_HOST', '127.0.0.1:9000')],
+                    UserManagementGrpcClient::class => ['host' => $env->get('USER_MANAGEMENT_GRPC_HOST', '127.0.0.1:9000')],
                     AuthenticationUserGrpcClient::class => ['host' => $env->get('AUTHENTICATION_USER_GRPC_HOST', '127.0.0.1:9000')],
                 ],
             ]
@@ -54,16 +54,16 @@ class ServiceBootloader extends Bootloader
     private function initServices(Container $container): void
     {
         $container->bindSingleton(
-            UserManagementUserGrpcClient::class,
+            UserManagementGrpcClient::class,
             static function(GRPCServicesConfig $config) use($container): UserGrpcClient
             {
-                $service = $config->getService(UserManagementUserGrpcClient::class);
+                $service = $config->getService(UserManagementGrpcClient::class);
                 $serviceClientCore = new ServiceClientCore(
                     $service['host'],
                     ['credentials' => $service['credentials'] ?? $config->getDefaultCredentials()]
                 );
 
-                return $container->make(UserManagementUserGrpcClient::class, ['core' => $serviceClientCore]);
+                return $container->make(UserManagementGrpcClient::class, ['core' => $serviceClientCore]);
             }
         );
     }

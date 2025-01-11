@@ -9,6 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *for creating user
+ *
  * Generated from protobuf message <code>user_management.CreateUserRequest</code>
  */
 class CreateUserRequest extends \Google\Protobuf\Internal\Message
